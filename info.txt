@@ -1,0 +1,29 @@
+Design a Game Runner to run games (Mario , SuperContra, Pacman) in
+an iterative approach)
+
+1. Iteration 1 : Tightly Coupled Java Code
+          >> Game Runner class.
+          >> Game classes : Maria, SuperContra, Pacman.
+
+2.Iteration 2 : Loose Coupling-Interfaces
+          >> Gamer Runner class.
+          >> Game Console Interface.
+                 >> Game classes : Mario, SuperContra , Pacman.
+
+
+      what we want --- > GameRunner ---> Game Console -- > Mario, SuperContra, Pacman.
+      Interface -- > common actions to be performed on a specific set of classes.
+
+ 3.Iteration 3 : Loose coupling - Spring level 1.
+
+        q1 --> Spring container vs spring context vs ioc container vs application context;
+               --> spring container/ioc container/spring context/  are the one who manages the beans and their life cycle;
+               --> spring bean --> any object managed by spring.
+
+        q2 --> Java beans vs spring beans
+        q3 --> How can i list all the beans managed by spring framework;
+                --->.getBeanDefinitionNames() -- > returns array of strings;
+        q4 --> what if multiple matching beans are available ? --> error --> use annotation @Primary to solve the problem;
+        q5 --> spring is managing objects and performing auto wiring.
+              --> but aren't we writing the code to create object ?
+              --> how do we get spring to create objects for us ?
