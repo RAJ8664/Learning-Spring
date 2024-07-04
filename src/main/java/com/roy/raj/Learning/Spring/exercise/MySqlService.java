@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-
 public class MySqlService implements DataService{
     public int[] retrieveData() {
         return new int[] {5 , 4, 6 , 3};
